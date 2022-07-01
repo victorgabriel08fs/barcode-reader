@@ -15,7 +15,7 @@
     <script src="quagga.min.js"></script>
 
     <script>
-
+        //inicia o Quagga
         Quagga.init({
             inputStream: {
                 name: "Live",
@@ -34,6 +34,7 @@
             Quagga.start();
         });
 
+        //quando detecta um código, imprime o resultado
         Quagga.onDetected(function (data) {
             console.log(data.codeResult.code);
             document.querySelector('#resultado').innerText = data.codeResult.code;
